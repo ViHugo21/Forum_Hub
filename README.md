@@ -1,0 +1,8 @@
+Introdução 
+Projeto de conclusão para o curso de back-end da Alura e Oracle Next Education. Envolve a programação para desenvolvimento de um fórum que permite aos usuários criar tópicos para pedirem ajuda ou enviar suas dúvidas sobre um determinado assunto que para esse projeto os assuntos são matérias de programação, e permite a outros usuários responder os tópicos abertos.
+Esse programa persiste todos os dados em um banco de dados local e executa todos os procedimentos de segurança necessários.
+
+Funcionamento
+A aplicação do Spring deve ser inicializada e os testes podem ser feitos usando programas como o Insomnia ou o site do Swagger. O usuário deve primeiramente se cadastrar no banco de dados informando nome, login, que deve ser um valor único e senha, após o cadastro o usuário deve realizar o login para gerar seu token JWT que tem validade de duas horas e deve ser enviado em todas as requisições para autenticar o usuário.
+O usuário após ter seu token gerado pode criar tópicos e responder outros tópicos, pode listar os tópicos abertos e encerrados, pois apenas tópicos abertos podem ser respondidos. Para abrir um tópico devem ser informados: titulo, curso e mensagem. Para respostas deve-se informar apenas a mensagem, que devem ser enviados no corpo da requisição como JSON.
+Tendo tópicos e respostas cadastrados no banco de dados o usuário também pode editá-los, caso tenha escrito algo errado, porém um usuário não pode editar nada que ele não tenha criado. Por último o usuário pode encerrar um tópico que ele tenha aberto indicando que provavelmente sua dúvida ou problema já foi resolvido, após isso não é possível responder, editar ou reabrir esse tópico.
