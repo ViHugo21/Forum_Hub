@@ -14,5 +14,8 @@ public interface TopicoRepository extends JpaRepository<Topico, Long> {
 
     @Query("SELECT t FROM Topico t WHERE t.ativo = false")
     Page<Topico> findAllByDesativado(Pageable paginacao);
+
+    @Query("SELECT t From Topico t")
+    Page<Topico> findAllTest(Pageable paginacao);
     
 }
